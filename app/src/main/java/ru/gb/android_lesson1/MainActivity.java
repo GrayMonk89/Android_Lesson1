@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 /**
  * Создать проект со следующими пользовательскими элементами:
@@ -29,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = findViewById(R.id.btn_show);
         TextView textView = findViewById(R.id.textView);
+        ToggleButton toggleButton = findViewById(R.id.toggleButton);
+        toggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((ToggleButton) view).isChecked();
+                if (checked){
+                    textView.setText("Будильник включен");
+                }
+                else{
+                    textView.setText("Будильник выключен");
+                }
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
