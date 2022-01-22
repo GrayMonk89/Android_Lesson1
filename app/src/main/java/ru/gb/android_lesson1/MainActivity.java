@@ -7,13 +7,16 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 /**
  * Создать проект со следующими пользовательскими элементами:
- * TextView+, EditText+, Button+, Switch, CheckBox, ToggleButton+.
+ * TextView+, EditText+, Button+, Switch, CheckBox+, ToggleButton+.
  * Для работы использовать LinearLayout. Использовать различные шрифты, цвета, размеры, прочие атрибуты.
  * Создать ещё один макет (если не получается, то проект) с несколькими EditText,
  * где использовать атрибут inputType: text, textPersonName, phone, number, textPassword, textEmailAddress и другие значения.
@@ -35,6 +38,24 @@ public class MainActivity extends AppCompatActivity {
         ToggleButton toggleButton = findViewById(R.id.toggleButton);
         EditText editText = findViewById(R.id.editText);
         TextView textViewInput = findViewById(R.id.textViewInput);
+        CheckBox checkBox = findViewById(R.id.checkBox);
+
+
+
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked = ((CheckBox) view).isChecked();
+                if(checked) {
+                    Log.d("mylogs","editText.setFocusable(true)");
+
+                    editText.setVisibility(View.VISIBLE);
+                }
+                else {
+                    editText.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
 
 
         editText.setOnKeyListener(new View.OnKeyListener() {

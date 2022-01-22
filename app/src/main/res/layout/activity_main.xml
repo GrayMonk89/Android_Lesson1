@@ -29,13 +29,24 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textStyle="italic"
+        android:textSize="27sp"
+        android:background="@color/cardview_dark_background"
+        android:text="Разблокировка поля ввода."
+        />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="120dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_horizontal"
-        android:hint="Введите текст"
+        android:hint="@string/myHintText"
+        android:visibility="invisible"
+
         />
 
     <TextView
@@ -44,6 +55,7 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         />
+
 
 
 </LinearLayout>
