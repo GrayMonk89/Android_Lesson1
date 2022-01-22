@@ -11,14 +11,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 /**
  * Создать проект со следующими пользовательскими элементами:
- * TextView+, EditText+, Button+, Switch, CheckBox+, ToggleButton+.
+ * TextView+, EditText+, Button+, Switch+, CheckBox+, ToggleButton+.
  * Для работы использовать LinearLayout. Использовать различные шрифты, цвета, размеры, прочие атрибуты.
- * Создать ещё один макет (если не получается, то проект) с несколькими EditText,
+ *
+ *  Создать ещё один макет (если не получается, то проект) с несколькими EditText,
  * где использовать атрибут inputType: text, textPersonName, phone, number, textPassword, textEmailAddress и другие значения.
  * Добавить в проект элемент CalendarView.
  * * Разобраться, что такое параметр ems.
@@ -39,6 +41,20 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.editText);
         TextView textViewInput = findViewById(R.id.textViewInput);
         CheckBox checkBox = findViewById(R.id.checkBox);
+        Switch switchTest = findViewById(R.id.switchTest);
+        switchTest.toggle();
+
+        switchTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(switchTest.isChecked()){
+                    switchTest.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+                } else {
+                    switchTest.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+                }
+
+            }
+        });
 
 
 

@@ -36,7 +36,7 @@
         android:textStyle="italic"
         android:textSize="27sp"
         android:background="@color/cardview_dark_background"
-        android:text="Разблокировка поля ввода."
+        android:text="@string/unblock"
         />
 
     <EditText
@@ -55,6 +55,13 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         />
+
+    <Switch
+        android:id="@+id/switchTest"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="@string/alarm"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
 
