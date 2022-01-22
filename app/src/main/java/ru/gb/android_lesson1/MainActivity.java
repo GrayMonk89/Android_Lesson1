@@ -4,14 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 /**
  * Создать проект со следующими пользовательскими элементами:
- * TextView, EditText, Button, Switch, CheckBox, ToggleButton.
+ * TextView+, EditText+, Button+, Switch, CheckBox, ToggleButton+.
  * Для работы использовать LinearLayout. Использовать различные шрифты, цвета, размеры, прочие атрибуты.
  * Создать ещё один макет (если не получается, то проект) с несколькими EditText,
  * где использовать атрибут inputType: text, textPersonName, phone, number, textPassword, textEmailAddress и другие значения.
@@ -31,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.btn_show);
         TextView textView = findViewById(R.id.textView);
         ToggleButton toggleButton = findViewById(R.id.toggleButton);
+        EditText editText = findViewById(R.id.editText);
+        TextView textViewInput = findViewById(R.id.textViewInput);
+
+
+        editText.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+                if(keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER))
+                {
+                    // сохраняем текст, введённый до нажатия Enter в переменную
+                    textViewInput.setText(editText.getText().toString());
+                    return true;
+                }
+                return false;
+            }
+        });
         toggleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
