@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/design_default_color_error"
         android:text="Hello World!"
         />
 
     <Button
         android:id="@+id/btn_show"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button"
         />
 
     <ToggleButton
         android:id="@+id/toggleButton"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:textStyle="italic"
         android:textSize="27sp"
@@ -41,12 +41,11 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_horizontal"
         android:hint="@string/myHintText"
         android:visibility="invisible"
-
         />
 
     <TextView
@@ -54,15 +53,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!"
+        android:textStyle="italic"
+        android:textSize="17sp"
+        android:ems="15"
+        android:textAlignment="center"
         />
 
     <Switch
         android:id="@+id/switchTest"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="@string/alarm"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
+        tools:ignore="UseSwitchCompatOrMaterialXml"
+        />
 
 
 </LinearLayout>

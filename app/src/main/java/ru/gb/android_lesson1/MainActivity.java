@@ -1,7 +1,10 @@
 package ru.gb.android_lesson1;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -22,7 +25,9 @@ import android.widget.ToggleButton;
  *
  *  Создать ещё один макет (если не получается, то проект) с несколькими EditText,
  * где использовать атрибут inputType: text, textPersonName, phone, number, textPassword, textEmailAddress и другие значения.
+ *
  * Добавить в проект элемент CalendarView.
+ *
  * * Разобраться, что такое параметр ems.
  */
 
@@ -42,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewInput = findViewById(R.id.textViewInput);
         CheckBox checkBox = findViewById(R.id.checkBox);
         Switch switchTest = findViewById(R.id.switchTest);
-        switchTest.toggle();
+
 
         switchTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         toggleButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 boolean checked = ((ToggleButton) view).isChecked();

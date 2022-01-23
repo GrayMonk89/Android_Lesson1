@@ -4,4 +4,12 @@
     <string name="myHintText">Введите текст латиницей</string>
     <string name="alarm">Alarm</string>
     <string name="unblock">Разблокировка поля ввода.</string>
+    <string name="GoTo">Перейдем на другую страницу</string>
+    <string name="GoBack">Вернутся на главную страницу</string>
+    <string name="hint_text_password">Text password</string>
+    <string name="date">date</string>
+    <string name="postal_address">Postal Address</string>
+    <string name="phone">Телефонный номер</string>
+    <string name="EmailAddress">Адресс электронной почты</string>
+    <string name="text">Различные поля ввода</string>
 </resources>
