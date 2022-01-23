@@ -47,7 +47,15 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewInput = findViewById(R.id.textViewInput);
         CheckBox checkBox = findViewById(R.id.checkBox);
         Switch switchTest = findViewById(R.id.switchTest);
+        Button buttonGoTo = findViewById(R.id.buttonGoTo);
+        Intent intent = new Intent(this, AnotherActivity.class);
 
+        buttonGoTo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
 
         switchTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
 
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         editText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
@@ -92,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
         toggleButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -105,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

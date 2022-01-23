@@ -67,5 +67,10 @@
         tools:ignore="UseSwitchCompatOrMaterialXml"
         />
 
-
+    <Button
+        android:id="@+id/buttonGoTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/GoTo"
+        />
 </LinearLayout>

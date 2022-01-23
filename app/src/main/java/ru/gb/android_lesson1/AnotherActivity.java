@@ -13,7 +13,14 @@ public class AnotherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_another);
-
+        Button buttonGoBack = findViewById(R.id.buttonGoBack);
+        Intent intent = new Intent(this, MainActivity.class);
+        buttonGoBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
     }
 
 }
